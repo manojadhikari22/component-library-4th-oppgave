@@ -1,0 +1,370 @@
+html {
+	font-size: var(--font-size-base);
+}
+
+body {
+	font-family: Arial, sans-serif;
+	padding: var(--spacing-medium);
+	display: flex;
+	flex-flow: row nowrap;
+	gap: var(--spacing-large);
+}
+
+.library-button {
+	color: var(--color-tertiary);
+}
+
+.library-button:hover,
+.library-button--active {
+	color: var(--color-primary);
+}
+
+.component {
+	display: none;
+	flex-flow: column nowrap;
+	gap: 4rem;
+}
+
+.component--visible {
+	display: flex;
+}
+
+.component-state {
+	display: flex;
+	width: 100%;
+	flex-flow: column nowrap;
+	
+}
+
+.component-state__name {
+	color: var(--color-tertiary);
+}
+
+/* For Accordion*/
+.accordion1 {
+    background-color: rgb(250, 244, 191);
+    padding: var(--spacing-small);
+    cursor: pointer;
+    border-bottom: 2px solid pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+}
+.accordion1.active {
+    color: blue;
+}
+.accordion1::after {
+    content: '+';
+    color: palevioletred;
+}
+.active::after {
+    content: '-';
+    color: palevioletred;
+}
+.desc {
+    padding: 0 var(--spacing-small);
+    width: 600px;
+    font-size: var(--spacing-medium);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+}
+
+/*For Counter*/
+
+.counter-div {
+    width: 500px;
+    border: 1px solid black;
+    padding: var(--spacing-medium);
+	margin-left: 10rem;
+    background-color: blue;
+    text-align: center;
+    color: white;
+
+}
+.count {
+    font-size: var(--spacing-extramedium);
+}
+.buttons {
+    margin-top: var(--spacing-medium);
+}
+.dec, .inc, .reset {
+	border-radius: var(--spacing-vsmall);
+	font-size: var(--spacing-medium);
+	padding: var(--spacing-vsmall);
+	margin: 0 var(--spacing-vsmall);
+}
+button.inc {
+    background-color: green;
+}
+button.reset {
+    background-color: lightcyan;
+}
+button.dec {
+    background-color: red;
+}
+
+/*Registration form*/
+.form-group {
+	margin-bottom: var(--spacing-medium);
+	margin-top: var(--spacing-medium);
+	font-size: var(--spacing-medium);
+	padding-right: var(--spacing-medium);
+  }
+  
+  label {
+	display: block;
+	margin-bottom: var(--spacing-vsmall);
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="address"] {
+	width: 100%;
+	display: block;
+	padding: var(--spacing-small);
+	border: 1px solid rgb(197, 202, 207);
+	border-radius: var(--spacing-vsmall);
+	margin-top: var(--spacing-vsmall);
+  }
+  
+  #text-message {
+	width: 100%;
+	display: block;
+	border-radius: var(--spacing-vsmall);
+  }
+  
+  input[type="submit"] {
+	background-color: #007BFF;
+	color: white;
+	border: none;
+	padding: var(--spacing-small) var(--spacing-medium);
+	border-radius: 3px;
+	cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+	background: rgb(39, 38, 38);
+  }
+
+  /*For Popup modal*/
+  .popup {
+	width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(35, 33, 127);
+    
+}
+p {
+    font-size: var(--spacing-mediummellom);
+    line-height: 1.5;
+}
+header {
+    color: white;
+    text-align: center;
+    padding-bottom: var(--spacing-medium);
+	margin-top: var(--spacing-small);
+}
+header h1 {
+    font-size: var(--spacing-mediummellom);
+    font-weight: 300;
+    line-height: 1;
+}
+header h1 span {
+    font-weight: 600;
+}
+header p {
+	font-size: var(--spacing-medium);
+}
+section .container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+form button {
+    border: 1px solid darkgrey;
+    padding: var(--spacing-small);
+    border-radius: var(--spacing-vsmall);
+    background: transparent;
+    font-size: var(--spacing-medium);
+    color: white;
+    transition: all .3s;
+    cursor: pointer;
+	margin-bottom: var(--spacing-medium);
+}
+form button:hover {
+    background-color: blueviolet;
+}
+.model {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,.5);
+    z-index: 1;
+}
+.model-content {
+    width: 80%;
+    max-width: 40rem;
+    background-color: #eee;
+    margin: 10% auto;
+    padding: var(--spacing-extramedium);
+    border: 1px solid gray;
+    position: relative;
+    text-align: center;
+    animation: slide ease .8s;
+}
+.model-content h1 {
+	font-size: var(--spacing-mediummellom);
+}
+.model-content p {
+	font-size: var(--spacing-medium);
+}
+.close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: peru;
+    font-size: var(--spacing-extramedium);
+    cursor: pointer;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(-30rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/*For Alert*/
+#showAlertBtn {
+	border: 1px solid rgb(209, 202, 202);
+	padding: var(--spacing-vsmall);
+	margin-top: var(--spacing-small);
+	border-radius: var(--spacing-vsmall);
+	background-color: rgb(236, 12, 12);
+  }
+.alert {
+	display: none;
+	padding: var(--spacing-small);
+	background-color: #f1c40f;
+	color: white;
+	border-radius: var(--spacing-vsmall);
+	margin-top: var(--spacing-small);
+  }
+
+
+  /*for Countdown*/
+#count {
+	background-color: black;
+    padding: var(--spacing-small);
+	margin-top: var(--spacing-medium);
+    font-size: var(--spacing-mediummellom);
+    border-radius: var(--spacing-small);
+	text-align: center;
+	color: white;
+}
+
+/* For Any specific date countdown*/
+/*Code similar as counter component above*/
+.random {
+	margin-top: var(--spacing-medium);
+	border: 1px solid black;
+	padding: var(--spacing-small);
+	background-color: gray;
+	color: white;
+	border-radius: var(--spacing-vsmall);
+}
+
+
+/* For Search engine*/
+.container2 {
+	max-width: 600px;
+    margin: 0 auto;
+}
+#search {
+    width: 100%;
+    font-size: var(--spacing-medium);
+    padding: var(--spacing-small) var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
+    border: 1px solid #ddd;
+}
+.list {
+    list-style: none;
+}
+.list li {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: var(--spacing-small);
+    margin-bottom: 1px solid #ddd;
+    display: block;
+}
+
+
+
+
+/* For product Card*/
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: var(--spacing-vsmall);
+    width: 250px;
+    padding: var(--spacing-small);
+    text-align: center;
+    margin: var(--spacing-small);
+    display: inline-block;
+}
+
+.product-image {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.product-title {
+    font-size: var(--spacing-medium);
+    margin-top: var(--spacing-vsmall);
+}
+
+.product-price {
+    font-size: var(--spacing-medium);
+    color: #007bff;
+    margin-top: none;
+}
+
+/* For Palindrome checking*/
+
+.container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+	justify-content: center;
+	flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-extramedium);
+}
+.pal {
+    background-color: aqua;
+}
+#btn2 {
+    border: none;
+    padding: var(--spacing-vsmall);
+    border-radius: var(--spacing-vsmall);
+	margin-top: var(--spacing-medium);
+    background-color: blueviolet;
+    color: white;
+}
+p.result {
+    margin-top: var(--spacing-medium);
+}

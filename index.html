@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Library</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/variable.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <aside class="library">
+        <ul>
+            <li>
+                <button data-component="accordion" class="librabry-button library-button--active">Accordion</button>
+            </li>
+
+            <li>
+                <button data-component="counter" class="library-button">Counter</button>
+            </li>
+
+            <li>
+                <button data-component="registration-form" class="library-button">Registration Form</button>
+            </li>
+
+            <li>
+                <button data-component="popup-modal" class="library-button">Popup</button>
+            </li>
+
+            <li>
+                <button data-component="alert" class="library-button">Alert</button>
+            </li>
+
+            <li>
+                <button data-component="countdown" class="library-button">Countdown</button>
+            </li>
+
+            <li>
+                <button data-component="randomnumber" class="library-button">Random Number</button>
+            </li>
+
+            <li>
+                <button data-component="search" class="library-button">Search</button>
+            </li>
+
+            <li>
+                <button data-component="product-card" class="library-button">Product Card</button>
+            </li>
+
+            <li>
+                <button data-component="palindrome" class="library-button">Palindrome</button>
+            </li>
+        </ul>
+    </aside>
+
+    <main>
+        <div class="component component--visible" data-name="accordion">
+            <div class="component-state">
+                <div class="accordion1">
+                    <p>Who are you?</p>
+                </div>
+                <div class="desc">
+                    <p>Curently I am a student and doing Frontend depelopment course.</p>
+                </div>
+                    
+                <div class="accordion1">
+                    <p>Whet we do?</p>
+                </div>
+                <div class="desc">
+                    <p>I am going to build a acordion.</p>
+                </div>
+                    
+                <div class="accordion1">
+                    <p>How to get started?</p>
+                </div>
+                <div class="desc">
+                    <p>lets start to add a simple click method and see the result.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="component" data-name="counter">
+            <div class="component-state">
+                <div class="container">
+                    <div class="counter-div">
+                        <h1>Counter</h1>
+                        <span class="count">0</span>
+                        <hr>
+                        <div class="buttons">
+                            <button class="dec">
+                                <!--To make the icon is interactive or click, nedd to put class name inside i tag-->
+                                <i class="fas fa-arrow-down dec"></i>
+                                Decrement
+                            </button>
+                            <button class="reset">
+                                <i class="fas fa-spinner reset"></i>
+                                Reset
+                            </button>
+                        
+                            <button class="inc">
+                                <i class="fas fa-arrow-up inc"></i>
+                                Increment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="component" data-name="registration-form">
+            <div class="component-state">
+                <form id="myForm">
+                    <div class="form-group">
+                        <label for="fullName">Name</label>
+                        <input type="text" id="name" name="name" placeholder="enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="homeaddress">Address</label>
+                        <input type="text" id="address" name="Address" placeholder="enter your home addrerss">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Register">
+                    </div>
+                </form>
+                <p class="errorMsg"></p>
+                   <p class="successMsg"></p>
+                <div class="datas"></div>
+            </div>
+        </div>
+        <div class="component" data-name="popup-modal">
+            <div class="component-state">
+                <div class="popup">
+                    <header>
+                        <h1><span>Let,s</span> Create a Model!!!!</h1>
+                        <p>Click below button</p>
+                    </header>
+                    <section>
+                        <div class="container1">
+                            <form action="">
+                                <button id="btn" class="btn">POPUP TEST</button>
+                            </form>
+                        </div>
+                    </section>
+                    <div class="model">
+                        <div class="model-content">
+                            <span class="close">&times;</span>
+                            <h1>Hello Nepal!!</h1>
+                            <hr>
+                            <p>Nepal, officially the Federal Democratic Republic of Nepal, is a landlocked country in South Asia. 
+                                It is mainly situated in the Himalayas, but also includes parts of the Indo-Gangetic Plain.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="component" data-name="alert">
+            <div class="component-state">
+                <div class="component1">
+                    <h2>Alert/Notifications</h2>
+                    <button id="showAlertBtn">Show Alert</button>
+                    <div class="alert" id="alert">This is an alert!</div>
+                </div>
+            </div>
+        </div>
+        <div class="component" data-name="countdown">
+            <div class="component-state">
+                <h2>Neapli Newyear Countdown</h2>
+                <div id="count">Countdown</div>
+            </div>
+        </div>
+        <div class="component" data-name="randomnumber">
+            <div class="component-state">
+                <div class="counter-div">
+                    <h1>Random number generator</h1>
+                    <span class="count number">0</span>
+                    <hr>
+                    <div class="button generate">
+                        <button class="random">
+                            Generate
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="component" data-name="search">
+            <div class="component-state">
+                <div class="container2">
+                    <input type="text" name="search" id="search" placeholder="search a country....">
+                    <ol class="list">
+                        <li id="lists">Nepal</li>
+                        <li id="lists">Usa</li>
+                        <li id="lists">Norway</li>
+                        <li id="lists">China</li>
+                        <li id="lists">japan</li>
+                        <li id="lists">Canada</li>
+                        <li id="lists">Malta</li>
+                        <li id="lists">India</li>
+                        <li id="lists">Canada</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="component" data-name="product-card">
+            <div class="component-state">
+                <div class="product-card">
+                    <img class="product-image" src="https://img01.ztat.net/article/spp-media-p1/7377be70ef9c43f088413526a7247bc8/d72616855f7f424486031fdf39827a58.jpg?imwidth=156&filter=packshot" alt="Product Image">
+                    <h2 class="product-title">Nike performance<br> Running shoe</h2>
+                    <p class="product-price">Price:$19.99</p>
+                    <div class="product-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="component" data-name="palindrome">
+            <div class="component-state">
+                <section class="main">
+                    <div class="container pal">
+                        <input type="text" class="input-text" placeholder="Enter the word...">
+                        <button id="btn2">Search</button>
+                        <p class="result"> Hello World!!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+<script src="app.js"></script>
+</body>
+</html>

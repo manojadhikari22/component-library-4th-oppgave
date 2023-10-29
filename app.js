@@ -10,9 +10,7 @@ libraryButtons.forEach(button => {
 // iterate through all components and display the one that matches with the "data-component" value.
 // then, iterate through all overview buttons and set the active class based on the same value.
 function displayComponent(event) {
-	// event.currentTarget always refers to the element used
-	// in (element).addEventListener, in this case, it refers
-	// to the button that was clicked
+	// event.currentTarget always refers to the element used in (element).
 	const button = event.currentTarget;
 	// extract the "data-component" value, e.g. "accordion",
 	// "breadcrumbs", "button", etc.
@@ -45,7 +43,6 @@ const acc = document.querySelectorAll('.accordion1');
 
 for (let i = 0; i < acc.length; i++) {
     acc[i].addEventListener('click', function() {
-        //this.classList.toggle('active');
         const desc = this.nextElementSibling;
 		const allDesc = document.querySelectorAll('.desc');
 		const activeAcc = document.getElementsByClassName('active accordion1');
@@ -60,9 +57,8 @@ for (let i = 0; i < acc.length; i++) {
 			for(let i = 0; i < allDesc.length; i++) {
 				allDesc[i].style.maxHeight = null;
 			} 
+			desc.style.maxHeight = desc.scrollHeight + 'px';
 			
-            desc.style.maxHeight = desc.scrollHeight + 'px';
-			//this.classList.remove('active');
         }
     });
 };
@@ -239,7 +235,7 @@ function palindrome() {
     const reversedArray = textArray.slice().reverse(); 
     const reverseString = reversedArray.join('');
         if (text.toLowerCase() === reverseString.toLowerCase()) {
-         results.innerHTML = 'palindrome';
+         results.innerHTML = 'Palindrome';
         } else
-        results.innerHTML = 'not palindrome';
+        results.innerHTML = 'Not palindrome';
 }

@@ -168,7 +168,7 @@ const f = setInterval(() => {
 
     const count = document.getElementById('count');
     
-    count.textContent = `${days}Days ${add(hours)}Hrs : 
+    count.textContent = `${days}Days : ${add(hours)}Hrs : 
     ${add(minutes)}Min : ${add(seconds)}s`;
 
     if (totalSeconds < 0) {
